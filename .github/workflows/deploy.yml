@@ -93,7 +93,7 @@ jobs:
           mkdir -p "$RELEASE_DIR"
 
           tar -xzf "${{ env.SFTP_REMOTE_PATH }}/deploy.tar.gz" -C "$RELEASE_DIR"
-          rm -f "${{ env.SFTP_REMOTE_PATH }}/deploy.tar.gz"
+          # rm -f "${{ env.SFTP_REMOTE_PATH }}/deploy.tar.gz"
 
           ln -sfn "$RELEASE_DIR" "${{ env.APP_DIR }}/current"
 
