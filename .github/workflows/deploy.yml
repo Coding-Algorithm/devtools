@@ -70,7 +70,7 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           port: ${{ secrets.SFTP_PORT }}
           local_path: ./deployZip.tar.gz
-          remote_path: ${{ env.SFTP_REMOTE_PATH }}
+          remote_path: ${{ env.APP_DIR }}
           sftp_only: true
 
       - name: Install sshpass
