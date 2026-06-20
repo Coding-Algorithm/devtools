@@ -60,7 +60,7 @@ jobs:
           cp -r public .next/standalone/public
 
       - name: Package build artifact
-        run: tar -czf deploy.tar.gz -C .next/standalone .
+        run: tar -czf deployZip.tar.gz -C .next/standalone .
 
       - name: Upload artifact via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
@@ -69,7 +69,7 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: ${{ secrets.SFTP_PORT }}
-          local_path: ./deploy.tar.gz
+          local_path: ./deployZip.tar.gz
           remote_path: ${{ env.SFTP_REMOTE_PATH }}
           sftp_only: true
 
@@ -92,8 +92,8 @@ jobs:
           RELEASE_DIR="${{ env.APP_DIR }}/releases/$(date +%Y%m%d_%H%M%S)"
           mkdir -p "$RELEASE_DIR"
 
-          tar -xzf "${{ env.APP_DIR }}/deploy.tar.gz" -C "$RELEASE_DIR"
-          rm -f "${{ env.APP_DIR }}/deploy.tar.gz"
+          tar -xzf "${{ env.APP_DIR }}/deployZip.tar.gz" -C "$RELEASE_DIR"
+          rm -f "${{ env.APP_DIR }}/deployZip.tar.gz"
 
           ln -sfn "$RELEASE_DIR" "${{ env.APP_DIR }}/current"
 

@@ -106,7 +106,7 @@ Each tool is a separate route. The home page is a responsive grid of tool cards.
 ### Global layout
 - Top bar: "DevTools" logo/brand (links to home), theme toggle (dark/light), GitHub star link
 - Content: full-width tool area
-- Footer: small — "Built by Ibrahim Taofeek — Free, no ads, no tracking"
+- Footer: small — "Built by Ibrahim Taofeek"
 
 ---
 

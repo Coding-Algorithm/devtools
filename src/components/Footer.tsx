@@ -10,8 +10,7 @@ export function Footer() {
           className="font-medium text-foreground hover:text-accent transition-colors"
         >
           Ibrahim Taofeek
-        </a>{' '}
-        &mdash; Free, no ads, no tracking
+        </a>
       </div>
     </footer>
   )

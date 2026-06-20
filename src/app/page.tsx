@@ -47,18 +47,12 @@ const tools = [
     description: "Format SQL queries with configurable style and dialect support.",
     icon: Database,
   },
-  {
-    href: "/uuid-generator",
-    title: "UUID Generator",
-    description: "Generate UUIDs in v4 and v7 formats, singly or in batches.",
-    icon: Hash,
-  },
-  {
-    href: "/url-encoder",
-    title: "URL Encoder / Decoder",
-    description: "Encode and decode URL components with smart auto-detection.",
-    icon: Link,
-  },
+  // {
+  //   href: "/url-encoder",
+  //   title: "URL Encoder / Decoder",
+  //   description: "Encode and decode URL components with smart auto-detection.",
+  //   icon: Link,
+  // },
 ];
 
 export default function Home() {

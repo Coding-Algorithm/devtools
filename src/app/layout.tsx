@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
   description:
     "A curated collection of small, genuinely useful developer tools. No ads, no login, no tracking.",
   icons: { icon: "/favicon.ico" },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -45,6 +47,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
+        <ServiceWorkerRegister />
       </body>
     </html>
   );
